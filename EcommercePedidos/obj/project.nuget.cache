@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Vj2c7FibfLITgskrWrw1KHYb0sUrsarRUV/IIYysSwbinBsMNPFU1BoDXNoz4SaubE3CqxZBzKH0YiNeim3oVQ==",
+  "dgSpecHash": "Lr0DZw0wSSXJc3x+Ip6aQQQZa0sAlfRbBdlroywSE91tA7qxr+O89JNmXX9ewgcS9okySM4ygtk+MRLIfEOLMQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maria\\Desktop\\EcommercePedidos\\EcommercePedidos.csproj",
+  "projectFilePath": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\EcommercePedidos.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Maria\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\Maria\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Maria\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Maria\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\Maria\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\Maria\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Maria\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\Maria\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
