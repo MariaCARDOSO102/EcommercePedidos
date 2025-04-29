@@ -1,4 +1,4 @@
-﻿using EcommercePedidos.Service;
+﻿using EcommercePedidos.Service.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommercePedidos.Controllers
