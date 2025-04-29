@@ -21,16 +21,20 @@ namespace EcommercePedidos.Objects.Models
         [Column("statuspedido")]
         public StatusPedido StatusPedido { get; set; }
 
+        [Column("tipofrete")]
+        public TipoFrete TipoFrete { get; set; }
+
         public Pedido() 
         {
             StatusPedido = StatusPedido.AguardandoPagamento;
         }
-        public Pedido(int id, string produto, float valor)
+        public Pedido(int id, string produto, float valor, TipoFrete tipoFrete)
         {
             Id = id;
             Produto = produto;
             Valor = valor;
-            StatusPedido = StatusPedido.AguardandoPagamento; 
+            StatusPedido = StatusPedido.AguardandoPagamento;
+            TipoFrete = tipoFrete;
         }     
     }
 }
