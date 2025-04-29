@@ -1,35 +1,30 @@
 ﻿using EcommercePedidos.Objects.Enums;
-using EcommercePedidos.Objects.Models;
+using EcommercePedidos.Service.Entities;
+using EcommercePedidos.Service.Interfaces;
 
 namespace EcommercePedidos.Service.States
 {
     public class AguardandoPagamento : IEstadoPedido
     {
-        private Pedido pedido;
+        private PedidoService _pedido;
 
-        public AguardandoPagamento(Pedido pedido)
+        public AguardandoPagamento(PedidoService pedido)
         {
-            this.pedido = pedido;
+            _pedido = pedido;
+            _pedido.StatusPedido = StatusPedido.AguardandoPagamento;
         }
 
-        public void SucessoAoPagar()
+        void IEstadoPedido.CancelarPedido()
         {
-            pedido.StatusPedido = StatusPedido.Pago;
+            _pedido.StatusPedido = new Cancelado(_pedido);
         }
-
-        public void CancelarPedido()
+        void IEstadoPedido.DespacharPedido()
         {
-            pedido.StatusPedido = StatusPedido.Cancelado;
+            throw new Exception("Não é possível despachar um pedido que ainda não foi pago.");
         }
-
-        public void DespacharPedido()
+        void IEstadoPedido.SucessoAoPagar()
         {
-            throw new InvalidOperationException("Não é possível despachar um pedido que ainda não foi pago.");
-        }
-
-        public Pedido GetPedido()
-        {
-            return pedido;
+            _pedido.StatusPedido = new Pago(_pedido);
         }
     }
 }

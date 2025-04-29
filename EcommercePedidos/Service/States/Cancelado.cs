@@ -1,35 +1,30 @@
 ﻿using EcommercePedidos.Objects.Enums;
-using EcommercePedidos.Objects.Models;
+using EcommercePedidos.Service.Entities;
+using EcommercePedidos.Service.Interfaces;
 
 namespace EcommercePedidos.Service.States
 {
     public class Cancelado : IEstadoPedido
     {
-        private Pedido pedido;
+        private PedidoService _pedido;
 
-        public Cancelado(Pedido pedido)
+        public Cancelado(PedidoService pedido)
         {
-            this.pedido = pedido;
+            _pedido = pedido;
+            _pedido.StatusPedido = StatusPedido.Cancelado;
         }
 
-        public void SucessoAoPagar()
+        void IEstadoPedido.CancelarPedido()
         {
-            throw new InvalidOperationException("Não é possível pagar um pedido cancelado.");
+            throw new Exception("Operação não suportada, pedido foi cancelado.");
         }
-
-        public void CancelarPedido()
+        void IEstadoPedido.DespacharPedido()
         {
-            throw new InvalidOperationException("O pedido já está cancelado.");
+            throw new Exception("Operação não suportada, pedido foi cancelado.");
         }
-
-        public void DespacharPedido()
+        void IEstadoPedido.SucessoAoPagar()
         {
-            throw new InvalidOperationException("Não é possível despachar um pedido cancelado.");
-        }
-
-        public Pedido GetPedido()
-        {
-            return _pedido;
+            throw new Exception("Operação não suportada, pedido foi cancelado.");
         }
     }
 }
