@@ -1,32 +1,25 @@
 ﻿using EcommercePedidos.Objects.Enums;
 using EcommercePedidos.Objects.Models;
 using EcommercePedidos.Service.Entities;
-using EcommercePedidos.Service.Interfaces;
 
 namespace EcommercePedidos.Service.States
 {
     public class Pago : IEstadoPedido
     {
-        private PedidoService _pedido;
-
-        public Pago(PedidoService pedido)
+        public IEstadoPedido CancelarPedido()
         {
-            _pedido = pedido;
-            _pedido.StatusPedido = StatusPedido.Pago;
+            return new Cancelado();
         }
 
-        void IEstadoPedido.CancelarPedido()
+        public IEstadoPedido DespacharPedido()
         {
-            _pedido.StatusPedido = new Cancelado(_pedido);
-        }
-        void IEstadoPedido.DespacharPedido()
-        {
-            _pedido.StatusPedido = new Enviado(_pedido);
-        }
-        void IEstadoPedido.SucessoAoPagar()
-        {
-            throw new Exception("O pedido já foi pago.");
+            return new Enviado();
         }
 
+        public IEstadoPedido SucessoAoPagar()
+        {
+            throw new Exception("Operação não suportada, o pedido já foi pago");
         }
+
+    }
 }

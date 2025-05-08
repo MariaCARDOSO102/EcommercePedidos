@@ -1,31 +1,24 @@
 ﻿using EcommercePedidos.Objects.Enums;
 using EcommercePedidos.Objects.Models;
 using EcommercePedidos.Service.Entities;
-using EcommercePedidos.Service.Interfaces;
 
 namespace EcommercePedidos.Service.States
 {
     public class Enviado : IEstadoPedido
     {
-        private PedidoService _pedido;
-
-        public Enviado(PedidoService pedido)
+        public IEstadoPedido CancelarPedido()
         {
-            _pedido = pedido;
-            _pedido.StatusPedido = StatusPedido.Enviado;
+            throw new Exception("Operação não suportada, o pedido já foi enviado");
         }
 
-        void IEstadoPedido.CancelarPedido()
+        public IEstadoPedido DespacharPedido()
         {
-            throw new Exception("Não é possível cancelar um pedido que já foi enviado.");
+            throw new Exception("Operação não suportada, o pedido já foi enviado");
         }
-        void IEstadoPedido.SucessoAoPagar()
+
+        public IEstadoPedido SucessoAoPagar()
         {
-            throw new Exception("Não é possível pagar um pedido já enviado.");
-        }
-        void IEstadoPedido.DespacharPedido()
-        {
-            throw new Exception("O pedido já foi enviado. Não é possível despachar novamente.");
+            throw new Exception("Operação não suportada, o pedido já foi enviado");
         }
     }
 }
