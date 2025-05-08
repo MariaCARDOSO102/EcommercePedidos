@@ -28,7 +28,7 @@ namespace EcommercePedidos.Objects.Models
         {
             StatusPedido = StatusPedido.AguardandoPagamento;
         }
-        public Pedido(int id, string produto, float valor, TipoFrete tipoFrete)
+        public Pedido(int id, string produto, float valor, StatusPedido statusPedido, TipoFrete tipoFrete)
         {
             Id = id;
             Produto = produto;
