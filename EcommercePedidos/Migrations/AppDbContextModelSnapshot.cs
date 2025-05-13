@@ -40,6 +40,11 @@ namespace EcommercePedidos.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("statuspedido");
 
+                    b.Property<float>("SubTotal")
+                        .HasMaxLength(50)
+                        .HasColumnType("real")
+                        .HasColumnName("subtotal");
+
                     b.Property<int>("TipoFrete")
                         .HasColumnType("integer")
                         .HasColumnName("tipofrete");
@@ -59,6 +64,7 @@ namespace EcommercePedidos.Migrations
                             Id = 1,
                             Produto = "Blusa",
                             StatusPedido = 1,
+                            SubTotal = 2.5f,
                             TipoFrete = 2,
                             Valor = 20.5f
                         },
@@ -67,6 +73,7 @@ namespace EcommercePedidos.Migrations
                             Id = 2,
                             Produto = "Calça",
                             StatusPedido = 1,
+                            SubTotal = 25.5f,
                             TipoFrete = 2,
                             Valor = 50.5f
                         },
@@ -75,6 +82,7 @@ namespace EcommercePedidos.Migrations
                             Id = 3,
                             Produto = "Sapato",
                             StatusPedido = 1,
+                            SubTotal = 25.5f,
                             TipoFrete = 2,
                             Valor = 100f
                         });

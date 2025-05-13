@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8gCHsHZkN/OO+eeC6wTHMKTOs+N5hCU58YLH/afbLhUr365N1pijaJZY9fgWT7b4ulMcrbSP+0KWieVoExmHLA==",
+  "dgSpecHash": "kvpOpferwfrGL8BilYMxbZl2pJegl6A/C8IEpp9E71NZIwjkbk9iRXOPtIUvcgKJtnnH0uOCMlrojXorYLCXVA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\EcommercePedidos.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,8 @@
     "C:\\Users\\Maria\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.4\\microsoft.extensions.primitives.9.0.4.nupkg.sha512",
     "C:\\Users\\Maria\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Maria\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\Maria\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
+    "C:\\Users\\Maria\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
     "C:\\Users\\Maria\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\Maria\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\Maria\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

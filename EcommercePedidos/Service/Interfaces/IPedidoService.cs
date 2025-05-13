@@ -6,8 +6,8 @@ namespace EcommercePedidos.Service.Interfaces
     {
         Task<IEnumerable<PedidoDTO>> ListarTodos();
         Task<PedidoDTO> ObterPorId(int id);
-        Task GerarPedido(PedidoDTO pedidoDTO);
-        Task Atualizar(PedidoDTO pedidoDTO, int id);
+        Task<PedidoDTO> GerarPedido(PedidoDTO pedidoDTO);
+        Task<PedidoDTO> Atualizar(PedidoDTO pedidoDTO, int id);
 
         Task<PedidoDTO> SucessoAoPagar(PedidoDTO entitiesDTO); 
         Task<PedidoDTO> DespacharPedido(PedidoDTO entitiesDTO);

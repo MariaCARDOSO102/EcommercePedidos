@@ -8,7 +8,7 @@ using EcommercePedidos.Service.Strategies;
 
 namespace EcommercePedidos.Service.Entities
 {
-    public class PedidoService : Pedido, IPedidoService
+    public class PedidoService : IPedidoService
     {
         private readonly IPedidoRepository _repository;
 
@@ -36,57 +36,82 @@ namespace EcommercePedidos.Service.Entities
             return ConverterParaDTO(entity);
         }
 
-        public async Task GerarPedido(PedidoDTO entitiesDTO)
+        public async Task<PedidoDTO> GerarPedido(PedidoDTO entitiesDTO)
         {
-            var entity = ConverterParaModel(entitiesDTO);
-
-            IFrete frete = GerarFretePorTipo(entity.TipoFrete);
-
-            await _repository.GerarPedido(entity);
-        }
-
-        public async Task Atualizar(PedidoDTO entitiesDTO, int id)
-        {
-            var existingEntity = await _repository.GetById(id);
-
-            if (existingEntity == null)
+            if (!Enum.IsDefined(typeof(StatusPedido), entitiesDTO.StatusPedido))
             {
-                throw new KeyNotFoundException($"Entity with id {id} not found.");
+                throw new ArgumentException("StatusPedido inválido.");
             }
 
             var entity = ConverterParaModel(entitiesDTO);
-            await _repository.Update(entity);
+
+            IFrete frete = GerarFretePorTipo(entity.TipoFrete);
+            entity.Valor = (float)frete.calcula(entity.SubTotal);
+
+            await _repository.GerarPedido(entity);
+            return ConverterParaDTO(entity);
         }
+
+        public async Task<PedidoDTO> Atualizar(PedidoDTO entitiesDTO, int id)
+        {
+            var existingPedido = await _repository.GetById(id);
+
+            if (existingPedido is null)
+            {
+                throw new KeyNotFoundException($"Pedido com id {id} não encontrado.");
+            }
+
+            if (existingPedido.StatusPedido == StatusPedido.AguardandoPagamento)
+            {
+                IFrete frete = GerarFretePorTipo((TipoFrete)entitiesDTO.TipoFrete);
+                entitiesDTO.Valor = (float)frete.calcula(entitiesDTO.SubTotal);
+            }
+            else
+            {
+                throw new Exception("Não é permitido atualizar o pedido, após seu cancelamento ou despache.");
+            }
+
+            var pedido = ConverterParaModel(entitiesDTO);
+            await _repository.Update(pedido);
+
+            return entitiesDTO;
+        }   
 
         public async Task<PedidoDTO> SucessoAoPagar(PedidoDTO entitiesDTO)
         {
+            var pedido = ConverterParaModel(entitiesDTO);
+
             IEstadoPedido status = ObterStatusClasse(ConverterParaModel(entitiesDTO).StatusPedido);
             IEstadoPedido newStatus = status.SucessoAoPagar();
             entitiesDTO.StatusPedido = (int)ObterEstadoEnum(newStatus);
 
-            await Atualizar(entitiesDTO, entitiesDTO.Id);
+            await _repository.Update(pedido); 
 
             return entitiesDTO;
         }
 
         public async Task<PedidoDTO> DespacharPedido(PedidoDTO entitiesDTO)
         {
+            var pedido = ConverterParaModel(entitiesDTO);
+
             IEstadoPedido status = ObterStatusClasse(ConverterParaModel(entitiesDTO).StatusPedido);
             IEstadoPedido newStatus = status.DespacharPedido();
             entitiesDTO.StatusPedido = (int)ObterEstadoEnum(newStatus);
 
-            await Atualizar(entitiesDTO, entitiesDTO.Id);
+            await _repository.Update(pedido);
 
             return entitiesDTO;
         }
 
         public async Task<PedidoDTO> CancelarPedido(PedidoDTO entitiesDTO)
         {
+            var pedido = ConverterParaModel(entitiesDTO);
+
             IEstadoPedido status = ObterStatusClasse(ConverterParaModel(entitiesDTO).StatusPedido);
             IEstadoPedido newStatus = status.CancelarPedido();
             entitiesDTO.StatusPedido = (int)ObterEstadoEnum(newStatus);
 
-            await Atualizar(entitiesDTO, entitiesDTO.Id);
+            await _repository.Update(pedido);
 
             return entitiesDTO;
         }
@@ -117,9 +142,9 @@ namespace EcommercePedidos.Service.Entities
             return state switch
             {
                 AguardandoPagamento _ => StatusPedido.AguardandoPagamento,
-                Pago _ => StatusPedido.Pago,
-                Enviado _ => StatusPedido.Enviado,
                 Cancelado _ => StatusPedido.Cancelado,
+                Enviado _ => StatusPedido.Enviado,
+                Pago _ => StatusPedido.Pago,
                 _ => throw new ArgumentException("Estado inválido"),
             };
         }
@@ -131,6 +156,7 @@ namespace EcommercePedidos.Service.Entities
                 Id = pedido.Id,
                 Produto = pedido.Produto,
                 Valor = pedido.Valor,
+                SubTotal = pedido.SubTotal,
                 StatusPedido = (int)pedido.StatusPedido,
                 TipoFrete = (int)pedido.TipoFrete,
             };
@@ -145,6 +171,7 @@ namespace EcommercePedidos.Service.Entities
                 Id = entitiesDTO.Id,
                 Produto = entitiesDTO.Produto,
                 Valor = entitiesDTO.Valor,
+                SubTotal = (float)entitiesDTO.SubTotal,
                 StatusPedido = (StatusPedido)entitiesDTO.StatusPedido,
                 TipoFrete = (TipoFrete)entitiesDTO.TipoFrete,
             };
