@@ -4,6 +4,7 @@ using EcommercePedidos.Objects.Enums;
 using EcommercePedidos.Objects.Models;
 using EcommercePedidos.Service.Interfaces;
 using EcommercePedidos.Service.States;
+using EcommercePedidos.Service.Strategies;
 
 namespace EcommercePedidos.Service.Entities
 {
@@ -14,7 +15,6 @@ namespace EcommercePedidos.Service.Entities
         public PedidoService(IPedidoRepository pedidoRepository)
         {
             _repository = pedidoRepository;
-            Status = ObterStatusClasse();
         }
 
         public async Task<IEnumerable<PedidoDTO>> ListarTodos()
@@ -39,6 +39,9 @@ namespace EcommercePedidos.Service.Entities
         public async Task GerarPedido(PedidoDTO entitiesDTO)
         {
             var entity = ConverterParaModel(entitiesDTO);
+
+            IFrete frete = GerarFretePorTipo(entity.TipoFrete);
+
             await _repository.GerarPedido(entity);
         }
 
@@ -55,26 +58,51 @@ namespace EcommercePedidos.Service.Entities
             await _repository.Update(entity);
         }
 
-        public Task<PedidoDTO> SucessoAoPagar(PedidoDTO entitiesDTO)
+        public async Task<PedidoDTO> SucessoAoPagar(PedidoDTO entitiesDTO)
         {
-            throw new NotImplementedException();
+            IEstadoPedido status = ObterStatusClasse(ConverterParaModel(entitiesDTO).StatusPedido);
+            IEstadoPedido newStatus = status.SucessoAoPagar();
+            entitiesDTO.StatusPedido = (int)ObterEstadoEnum(newStatus);
+
+            await Atualizar(entitiesDTO, entitiesDTO.Id);
+
+            return entitiesDTO;
         }
 
-        public Task<PedidoDTO> DespacharPedido(PedidoDTO entitiesDTO)
+        public async Task<PedidoDTO> DespacharPedido(PedidoDTO entitiesDTO)
         {
-            throw new NotImplementedException();
+            IEstadoPedido status = ObterStatusClasse(ConverterParaModel(entitiesDTO).StatusPedido);
+            IEstadoPedido newStatus = status.DespacharPedido();
+            entitiesDTO.StatusPedido = (int)ObterEstadoEnum(newStatus);
+
+            await Atualizar(entitiesDTO, entitiesDTO.Id);
+
+            return entitiesDTO;
         }
 
-        public Task<PedidoDTO> CancelarPedido(PedidoDTO entitiesDTO)
+        public async Task<PedidoDTO> CancelarPedido(PedidoDTO entitiesDTO)
         {
-            throw new NotImplementedException();
+            IEstadoPedido status = ObterStatusClasse(ConverterParaModel(entitiesDTO).StatusPedido);
+            IEstadoPedido newStatus = status.CancelarPedido();
+            entitiesDTO.StatusPedido = (int)ObterEstadoEnum(newStatus);
+
+            await Atualizar(entitiesDTO, entitiesDTO.Id);
+
+            return entitiesDTO;
+        }
+        private IFrete GerarFretePorTipo(TipoFrete tipoFrete)
+        {
+            return tipoFrete switch
+            {
+                TipoFrete.Aereo => new FreteAereo(),
+                TipoFrete.Terrestre => new FreteTerrestre(),
+                _ => throw new ArgumentException("Frete inválido"),
+            };
         }
 
-        public IEstadoPedido Status;
-
-        private IEstadoPedido ObterStatusClasse()
+        private IEstadoPedido ObterStatusClasse(StatusPedido statusPedido)
         {
-            return StatusPedido switch
+            return statusPedido switch
             {
                 StatusPedido.AguardandoPagamento => new AguardandoPagamento(),
                 StatusPedido.Pago => new Pago(),
@@ -84,9 +112,9 @@ namespace EcommercePedidos.Service.Entities
             }; 
         }
 
-        private StatusPedido ObterEstadoEnum()
+        private StatusPedido ObterEstadoEnum(IEstadoPedido state)
         {
-            return Status switch
+            return state switch
             {
                 AguardandoPagamento _ => StatusPedido.AguardandoPagamento,
                 Pago _ => StatusPedido.Pago,
@@ -115,6 +143,7 @@ namespace EcommercePedidos.Service.Entities
             Pedido pedido = new()
             {
                 Id = entitiesDTO.Id,
+                Produto = entitiesDTO.Produto,
                 Valor = entitiesDTO.Valor,
                 StatusPedido = (StatusPedido)entitiesDTO.StatusPedido,
                 TipoFrete = (TipoFrete)entitiesDTO.TipoFrete,

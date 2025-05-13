@@ -9,7 +9,7 @@ namespace EcommercePedidos.Service.Interfaces
         Task GerarPedido(PedidoDTO pedidoDTO);
         Task Atualizar(PedidoDTO pedidoDTO, int id);
 
-        Task<PedidoDTO> SucessoAoPagar(PedidoDTO entitiesDTO);
+        Task<PedidoDTO> SucessoAoPagar(PedidoDTO entitiesDTO); 
         Task<PedidoDTO> DespacharPedido(PedidoDTO entitiesDTO);
         Task<PedidoDTO> CancelarPedido(PedidoDTO entitiesDTO);
     }
