@@ -17,7 +17,7 @@ namespace EcommercePedidos.Service.Entities
             _repository = pedidoRepository;
         }
 
-        public async Task<IEnumerable<PedidoDTO>> ListarTodos()
+        public async Task<IEnumerable<PedidoDTO>> ListAll()
         {
             var pedidos = await _repository.Get();
             List<PedidoDTO> entitiesDTO = [];
@@ -30,9 +30,13 @@ namespace EcommercePedidos.Service.Entities
             return entitiesDTO;
         }
 
-        public async Task<PedidoDTO> ObterPorId(int id)
+        public async Task<PedidoDTO> GetById(int id)
         {
             var entity = await _repository.GetById(id);
+
+            if (entity == null)
+                throw new KeyNotFoundException($"Pedido com id {id} não encontrado.");
+
             return ConverterParaDTO(entity);
         }
 
@@ -42,6 +46,8 @@ namespace EcommercePedidos.Service.Entities
             {
                 throw new ArgumentException("StatusPedido inválido.");
             }
+
+            entitiesDTO.StatusPedido = (int)StatusPedido.AguardandoPagamento;
 
             var entity = ConverterParaModel(entitiesDTO);
 
@@ -68,7 +74,7 @@ namespace EcommercePedidos.Service.Entities
             }
             else
             {
-                throw new Exception("Não é permitido atualizar o pedido, após seu cancelamento ou despache.");
+                throw new Exception("Não é permitido atualizar o pedido, após seu pagamento, cancelamento ou despache.");
             }
 
             var pedido = ConverterParaModel(entitiesDTO);
@@ -77,43 +83,52 @@ namespace EcommercePedidos.Service.Entities
             return entitiesDTO;
         }   
 
-        public async Task<PedidoDTO> SucessoAoPagar(PedidoDTO entitiesDTO)
+        public async Task<PedidoDTO> SucessoAoPagar(int id)
         {
-            var pedido = ConverterParaModel(entitiesDTO);
+            var pedido = await _repository.GetById(id);
 
-            IEstadoPedido status = ObterStatusClasse(ConverterParaModel(entitiesDTO).StatusPedido);
-            IEstadoPedido newStatus = status.SucessoAoPagar();
-            entitiesDTO.StatusPedido = (int)ObterEstadoEnum(newStatus);
+            if (pedido == null)
+                throw new KeyNotFoundException($"Pedido com id {id} não encontrado.");
 
-            await _repository.Update(pedido); 
-
-            return entitiesDTO;
-        }
-
-        public async Task<PedidoDTO> DespacharPedido(PedidoDTO entitiesDTO)
-        {
-            var pedido = ConverterParaModel(entitiesDTO);
-
-            IEstadoPedido status = ObterStatusClasse(ConverterParaModel(entitiesDTO).StatusPedido);
-            IEstadoPedido newStatus = status.DespacharPedido();
-            entitiesDTO.StatusPedido = (int)ObterEstadoEnum(newStatus);
+            IEstadoPedido estadoAtual = ObterStatusClasse(pedido.StatusPedido);
+            IEstadoPedido novoEstado = estadoAtual.SucessoAoPagar();
+            pedido.StatusPedido = ObterEstadoEnum(novoEstado);
 
             await _repository.Update(pedido);
 
-            return entitiesDTO;
+            return ConverterParaDTO(pedido);
         }
 
-        public async Task<PedidoDTO> CancelarPedido(PedidoDTO entitiesDTO)
+        public async Task<PedidoDTO> DespacharPedido(int id)
         {
-            var pedido = ConverterParaModel(entitiesDTO);
+            var pedido = await _repository.GetById(id);
 
-            IEstadoPedido status = ObterStatusClasse(ConverterParaModel(entitiesDTO).StatusPedido);
-            IEstadoPedido newStatus = status.CancelarPedido();
-            entitiesDTO.StatusPedido = (int)ObterEstadoEnum(newStatus);
+            if (pedido == null)
+                throw new KeyNotFoundException($"Pedido com id {id} não encontrado.");
+
+            IEstadoPedido estadoAtual = ObterStatusClasse(pedido.StatusPedido);
+            IEstadoPedido novoEstado = estadoAtual.DespacharPedido();
+            pedido.StatusPedido = ObterEstadoEnum(novoEstado);
 
             await _repository.Update(pedido);
 
-            return entitiesDTO;
+            return ConverterParaDTO(pedido);
+        }
+
+        public async Task<PedidoDTO> CancelarPedido(int id)
+        {
+            var pedido = await _repository.GetById(id);
+
+            if (pedido == null)
+                throw new KeyNotFoundException($"Pedido com id {id} não encontrado.");
+
+            IEstadoPedido estadoAtual = ObterStatusClasse(pedido.StatusPedido);
+            IEstadoPedido novoEstado = estadoAtual.CancelarPedido();
+            pedido.StatusPedido = ObterEstadoEnum(novoEstado);
+
+            await _repository.Update(pedido);
+
+            return ConverterParaDTO(pedido);
         }
         private IFrete GerarFretePorTipo(TipoFrete tipoFrete)
         {

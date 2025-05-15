@@ -16,26 +16,31 @@ namespace EcommercePedidos.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ListarTodos()
+        public async Task<IActionResult> ListAll()
         {
-            var pedidos = await _pedidoService.ListarTodos();
+            var pedidos = await _pedidoService.ListAll();
             return Ok(pedidos);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> ObterPorId(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var pedido = await _pedidoService.ObterPorId(id);
-            if (pedido == null)
-                return NotFound();
-            return Ok(pedido);
+            try
+            {
+                var pedido = await _pedidoService.GetById(id);
+                return Ok(pedido);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { mensagem = ex.Message });
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> CriarPedido([FromBody] PedidoDTO pedidoDTO)
         {
             await _pedidoService.GerarPedido(pedidoDTO);
-            return CreatedAtAction(nameof(ObterPorId), new { id = pedidoDTO.Id }, pedidoDTO);
+            return CreatedAtAction(nameof(GetById), new { id = pedidoDTO.Id }, pedidoDTO);
         }
 
         [HttpPut("{id}")]
@@ -43,8 +48,26 @@ namespace EcommercePedidos.API.Controllers
         {
             try
             {
-                await _pedidoService.Atualizar(pedidoDTO, id);
+                var pedidoAtualizado = await _pedidoService.Atualizar(pedidoDTO, id);
                 return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { mensagem = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { mensagem = ex.Message });
+            }
+        }
+
+        [HttpPut("{id}/sucesso-pagamento")]
+        public async Task<IActionResult> SucessoPagamento(int id)
+        {
+            try
+            {
+                var atualizado = await _pedidoService.SucessoAoPagar(id);
+                return Ok(atualizado);
             }
             catch (KeyNotFoundException)
             {
@@ -52,25 +75,32 @@ namespace EcommercePedidos.API.Controllers
             }
         }
 
-        [HttpPut("sucesso-pagamento")]
-        public async Task<IActionResult> SucessoPagamento([FromBody] PedidoDTO pedidoDTO)
+        [HttpPut("{id}/despachar")]
+        public async Task<IActionResult> DespacharPedido(int id)
         {
-            var atualizado = await _pedidoService.SucessoAoPagar(pedidoDTO);
-            return Ok(atualizado);
+            try
+            {
+                var atualizado = await _pedidoService.DespacharPedido(id);
+                return Ok(atualizado);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
         }
 
-        [HttpPut("despachar")]
-        public async Task<IActionResult> DespacharPedido([FromBody] PedidoDTO pedidoDTO)
+        [HttpPut("{id}/cancelar")]
+        public async Task<IActionResult> CancelarPedido(int id)
         {
-            var atualizado = await _pedidoService.DespacharPedido(pedidoDTO);
-            return Ok(atualizado);
-        }
-
-        [HttpPut("cancelar")]
-        public async Task<IActionResult> CancelarPedido([FromBody] PedidoDTO pedidoDTO)
-        {
-            var atualizado = await _pedidoService.CancelarPedido(pedidoDTO);
-            return Ok(atualizado);
+            try
+            {
+                var atualizado = await _pedidoService.CancelarPedido(id);
+                return Ok(atualizado);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
         }
     }
 }
