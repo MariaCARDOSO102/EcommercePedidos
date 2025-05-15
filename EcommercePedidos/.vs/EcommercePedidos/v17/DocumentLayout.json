@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\strategies\\ifrete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\strategies\\ifrete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\strategies\\freteterrestre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\strategies\\freteterrestre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\entities\\pedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\entities\\pedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\states\\iestadopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\states\\iestadopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\objects\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:objects\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\objects\\dtos\\entities\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:objects\\dtos\\entities\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\migrations\\20250513174306_ecommercepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:migrations\\20250513174306_ecommercepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\strategies\\freteaereo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\strategies\\freteaereo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\states\\aguardandopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +31,24 @@
       "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\interfaces\\ipedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\strategies\\ifrete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\strategies\\ifrete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\strategies\\freteterrestre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\strategies\\freteterrestre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\states\\iestadopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\states\\iestadopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\controllers\\controllerpedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:controllers\\controllerpedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\objects\\enums\\statuspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:objects\\enums\\statuspedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\strategies\\freteaereo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\strategies\\freteaereo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\states\\cancelado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\objects\\enums\\tipofrete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:objects\\enums\\tipofrete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\objects\\dtos\\entities\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:objects\\dtos\\entities\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\service\\states\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:service\\states\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|c:\\users\\maria\\desktop\\trabalhoprogramacao\\ecommercepedidos\\migrations\\20250513174306_ecommercepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F9E5709-9126-454B-9B71-599E5ED4DE8D}|EcommercePedidos.csproj|solutionrelative:migrations\\20250513174306_ecommercepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,198 +118,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IPedidoService.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Interfaces\\IPedidoService.cs",
-              "RelativeDocumentMoniker": "Service\\Interfaces\\IPedidoService.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Interfaces\\IPedidoService.cs",
-              "RelativeToolTip": "Service\\Interfaces\\IPedidoService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T17:35:47.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IEstadoPedido.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\IEstadoPedido.cs",
-              "RelativeDocumentMoniker": "Service\\States\\IEstadoPedido.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\IEstadoPedido.cs",
-              "RelativeToolTip": "Service\\States\\IEstadoPedido.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T00:50:46.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FreteTerrestre.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\FreteTerrestre.cs",
-              "RelativeDocumentMoniker": "Service\\Strategies\\FreteTerrestre.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\FreteTerrestre.cs",
-              "RelativeToolTip": "Service\\Strategies\\FreteTerrestre.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T01:22:29.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PedidoService.cs",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Entities\\PedidoService.cs",
               "RelativeDocumentMoniker": "Service\\Entities\\PedidoService.cs",
               "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Entities\\PedidoService.cs",
               "RelativeToolTip": "Service\\Entities\\PedidoService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAAAAAA",
+              "ViewState": "AQIAALEAAAAAAAAAAAAmwL8AAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T18:14:51.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Pedido.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Models\\Pedido.cs",
-              "RelativeDocumentMoniker": "Objects\\Models\\Pedido.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Models\\Pedido.cs",
-              "RelativeToolTip": "Objects\\Models\\Pedido.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAswBgAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T00:48:01.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ControllerPedido.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Controllers\\ControllerPedido.cs",
-              "RelativeDocumentMoniker": "Controllers\\ControllerPedido.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Controllers\\ControllerPedido.cs",
-              "RelativeToolTip": "Controllers\\ControllerPedido.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAcwCoAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T20:09:36.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AguardandoPagamento.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\AguardandoPagamento.cs",
-              "RelativeDocumentMoniker": "Service\\States\\AguardandoPagamento.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\AguardandoPagamento.cs",
-              "RelativeToolTip": "Service\\States\\AguardandoPagamento.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T00:51:07.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IFrete.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\IFrete.cs",
-              "RelativeDocumentMoniker": "Service\\Strategies\\IFrete.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\IFrete.cs",
-              "RelativeToolTip": "Service\\Strategies\\IFrete.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T01:23:19.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StatusPedido.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Enums\\StatusPedido.cs",
-              "RelativeDocumentMoniker": "Objects\\Enums\\StatusPedido.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Enums\\StatusPedido.cs",
-              "RelativeToolTip": "Objects\\Enums\\StatusPedido.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T18:10:49.916Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Enviado.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\Enviado.cs",
-              "RelativeDocumentMoniker": "Service\\States\\Enviado.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\Enviado.cs",
-              "RelativeToolTip": "Service\\States\\Enviado.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T00:51:43.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FreteAereo.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\FreteAereo.cs",
-              "RelativeDocumentMoniker": "Service\\Strategies\\FreteAereo.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\FreteAereo.cs",
-              "RelativeToolTip": "Service\\Strategies\\FreteAereo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T01:23:00.53Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Cancelado.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\Cancelado.cs",
-              "RelativeDocumentMoniker": "Service\\States\\Cancelado.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\Cancelado.cs",
-              "RelativeToolTip": "Service\\States\\Cancelado.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T00:52:11.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAcwBMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T18:14:11.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PedidoBuilder.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\Builders\\PedidoBuilder.cs",
-              "RelativeDocumentMoniker": "Data\\Builders\\PedidoBuilder.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\Builders\\PedidoBuilder.cs",
-              "RelativeToolTip": "Data\\Builders\\PedidoBuilder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T18:17:37.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TipoFrete.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Enums\\TipoFrete.cs",
-              "RelativeDocumentMoniker": "Objects\\Enums\\TipoFrete.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Enums\\TipoFrete.cs",
-              "RelativeToolTip": "Objects\\Enums\\TipoFrete.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T13:03:59.13Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "PedidoDTO.cs",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Dtos\\Entities\\PedidoDTO.cs",
               "RelativeDocumentMoniker": "Objects\\Dtos\\Entities\\PedidoDTO.cs",
@@ -321,7 +147,187 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Models\\Pedido.cs",
+              "RelativeDocumentMoniker": "Objects\\Models\\Pedido.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Models\\Pedido.cs",
+              "RelativeToolTip": "Objects\\Models\\Pedido.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAswBgAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T00:48:01.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AguardandoPagamento.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\AguardandoPagamento.cs",
+              "RelativeDocumentMoniker": "Service\\States\\AguardandoPagamento.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\AguardandoPagamento.cs",
+              "RelativeToolTip": "Service\\States\\AguardandoPagamento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T00:51:07.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IFrete.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\IFrete.cs",
+              "RelativeDocumentMoniker": "Service\\Strategies\\IFrete.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\IFrete.cs",
+              "RelativeToolTip": "Service\\Strategies\\IFrete.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T01:23:19.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IPedidoService.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Interfaces\\IPedidoService.cs",
+              "RelativeDocumentMoniker": "Service\\Interfaces\\IPedidoService.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Interfaces\\IPedidoService.cs",
+              "RelativeToolTip": "Service\\Interfaces\\IPedidoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T17:35:47.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FreteAereo.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\FreteAereo.cs",
+              "RelativeDocumentMoniker": "Service\\Strategies\\FreteAereo.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\FreteAereo.cs",
+              "RelativeToolTip": "Service\\Strategies\\FreteAereo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T01:23:00.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20250513174306_EcommercePedido.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Migrations\\20250513174306_EcommercePedido.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250513174306_EcommercePedido.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Migrations\\20250513174306_EcommercePedido.cs",
+              "RelativeToolTip": "Migrations\\20250513174306_EcommercePedido.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T17:43:07.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ControllerPedido.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Controllers\\ControllerPedido.cs",
+              "RelativeDocumentMoniker": "Controllers\\ControllerPedido.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Controllers\\ControllerPedido.cs",
+              "RelativeToolTip": "Controllers\\ControllerPedido.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAcwCoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T20:09:36.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FreteTerrestre.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\FreteTerrestre.cs",
+              "RelativeDocumentMoniker": "Service\\Strategies\\FreteTerrestre.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\Strategies\\FreteTerrestre.cs",
+              "RelativeToolTip": "Service\\Strategies\\FreteTerrestre.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T01:22:29.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IEstadoPedido.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\IEstadoPedido.cs",
+              "RelativeDocumentMoniker": "Service\\States\\IEstadoPedido.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\IEstadoPedido.cs",
+              "RelativeToolTip": "Service\\States\\IEstadoPedido.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T00:50:46.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StatusPedido.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Enums\\StatusPedido.cs",
+              "RelativeDocumentMoniker": "Objects\\Enums\\StatusPedido.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Enums\\StatusPedido.cs",
+              "RelativeToolTip": "Objects\\Enums\\StatusPedido.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:10:49.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Enviado.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\Enviado.cs",
+              "RelativeDocumentMoniker": "Service\\States\\Enviado.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\Enviado.cs",
+              "RelativeToolTip": "Service\\States\\Enviado.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T00:51:43.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Cancelado.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\Cancelado.cs",
+              "RelativeDocumentMoniker": "Service\\States\\Cancelado.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\Cancelado.cs",
+              "RelativeToolTip": "Service\\States\\Cancelado.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T00:52:11.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAcwBMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T18:14:11.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PedidoBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\Builders\\PedidoBuilder.cs",
+              "RelativeDocumentMoniker": "Data\\Builders\\PedidoBuilder.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\Builders\\PedidoBuilder.cs",
+              "RelativeToolTip": "Data\\Builders\\PedidoBuilder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T18:17:37.48Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "TipoFrete.cs",
+              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Enums\\TipoFrete.cs",
+              "RelativeDocumentMoniker": "Objects\\Enums\\TipoFrete.cs",
+              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Enums\\TipoFrete.cs",
+              "RelativeToolTip": "Objects\\Enums\\TipoFrete.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:03:59.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\GenericRepository.cs",
@@ -333,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "PedidoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\Repositories\\PedidoRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\PedidoRepository.cs",
@@ -345,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\Interfaces\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "Data\\Interfaces\\IGenericRepository.cs",
@@ -357,19 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "20250513174306_EcommercePedido.cs",
-              "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Migrations\\20250513174306_EcommercePedido.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250513174306_EcommercePedido.cs",
-              "ToolTip": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Migrations\\20250513174306_EcommercePedido.cs",
-              "RelativeToolTip": "Migrations\\20250513174306_EcommercePedido.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAIBJwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T17:43:07.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "IPedidoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Data\\Interfaces\\IPedidoRepository.cs",
               "RelativeDocumentMoniker": "Data\\Interfaces\\IPedidoRepository.cs",
@@ -381,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "PedidoMapping.cs",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Objects\\Dtos\\Mappings\\PedidoMapping.cs",
               "RelativeDocumentMoniker": "Objects\\Dtos\\Mappings\\PedidoMapping.cs",
@@ -393,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -405,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -417,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "EcommercePedidos.http",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\EcommercePedidos.http",
               "RelativeDocumentMoniker": "EcommercePedidos.http",
@@ -429,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "EcommercePedidos.csproj",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\EcommercePedidos.csproj",
               "RelativeDocumentMoniker": "EcommercePedidos.csproj",
@@ -441,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Pago.cs",
               "DocumentMoniker": "C:\\Users\\Maria\\Desktop\\TrabalhoProgramacao\\EcommercePedidos\\Service\\States\\Pago.cs",
               "RelativeDocumentMoniker": "Service\\States\\Pago.cs",
