@@ -16,12 +16,19 @@ Este projeto tem como objetivo controlar os pedidos realizados em um sistema de 
 - O **padrão State** permite que um objeto altere seu comportamento de acordo com seu estado interno.
 - Foi utilizado para gerenciar as mudanças de status do pedido, evitando estruturas complexas como grandes blocos condicionais.
 - Cada estado é representado por uma classe específica que implementa uma interface comum com os métodos de transição de estado.
+- **Diagrama padrão:**
+
+![image](https://github.com/user-attachments/assets/87c22b51-17a4-4b65-b80d-8d47e24a2c5f)
+
 
 ### Padrão Strategy
 
 - O **padrão Strategy** define uma família de algoritmos encapsulados em classes separadas, que podem ser utilizadas de forma intercambiável.
 - Aplicado ao cálculo do frete, permitindo que cada tipo de frete (aéreo ou terrestre) tenha sua própria lógica de cálculo.
 - Novas estratégias podem ser adicionadas sem modificar o código existente, respeitando os princípios **SOLID** (em especial, o princípio open/closed).
+- **Diagrama padrão:**
+
+![image](https://github.com/user-attachments/assets/5a24550f-aa1e-4c2e-9b34-78010ed87924)
 
 ---
 
